@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Choibá Ecolodge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="www.choiba.com.co" />
+	<meta name="keywords" content="www.choiba.com.co Turismo Colombia Ballenas" />
+	<meta name="author" content="Choiba" />
+
+ 
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="images/avistamiento_rrd_icon.ico">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,900,700,900italic' rel='stylesheet' type='text/css'> -->
+
+	<!-- Stylesheets -->
+	<!-- Dropdown Menu -->
+	<link rel="stylesheet" href="css/superfish.css">
+	<link rel="stylesheet" href="css/style_list.css">
+	<!-- Owl Slider -->
+	<!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
+	<!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+	<!-- CS Select -->
+	<link rel="stylesheet" href="css/cs-select.css">
+	<link rel="stylesheet" href="css/cs-skin-border.css">
+
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Flat Icon -->
+	<link rel="stylesheet" href="css/flaticon.css">
+	<!-- Icomoon -->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div id="fh5co-wrapper">
+	<div id="fh5co-page">
+	<div id="fh5co-header">
+		<header id="fh5co-header-section">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+					<h1 id="fh5co-logo"><a href="index.html">Choiba</a></h1>
+					
+				</div>	
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li><a href="index.html">Inicio</a></li>
+							<li><a href="index.html#quienes_somos"> ¿Quienes Somos?</a></li>
+							<li><a href="index.html#services">Servicios</a></li>
+							<li><a href="index.html#testimonios">Testimonios</a></li>
+							<li><a href="index.html#responsable">Turismo Consiente</a></li>
+							<li><a class="active" href="PriceList.html#Precios">Precios</a></li>
+							<li><a href="contact.html">Contacto</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+	</div>
+	<!-- end:fh5co-header -->
+	<div class="fh5co-parallax" style="background-image: url(images/Precios.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+					<div class="fh5co-intro fh5co-table-cell">
+					<div class="desc">
+						
+						<h1 class="text-center">Lista de Precios</h1>
+					</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-contact-section precios">
+		<div ng-app ng-controller="OrderFormController">
+	<form>
+		
+		<h1>A continuación, selecciona los Items deseados, y al final de la lista podrás ver un precio estimado total de los servicios seleccionados</h1>
+		
+		<ul>
+			<!-- Percorre o array 'services', atribuindo um manipulador click, e defini ou remove a classe css "active" se necessário -->
+			<li ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{ active:service.active }">
+			
+				<!-- Note o uso do 'current filter', que vai formatar o preço -->
+				{{ service.name }} <span>COP$ {{ service.price }}</span>
+			</li>
+		</ul>
+
+		<div class="total">
+			<!-- Calcule o preço total de todas as escolhas de serviços. Formate isso como moeda -->
+			Total: <span>COP$ {{ total() }}</span>
+		</div>
+
+	</form>
+
+	<!-- Include AngularJS from Google's CDN
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script> -->
+	<script src="JS/angular.min.js"></script> 
+
+	<script src="js/index.js"></script>
+</div>	
+
+	</div>
+	
+
+	<footer id="footer" class="fh5co-bg-color">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-3">
+							<h3>Compañia</h3>
+							<ul class="link">
+								<li><a href="#quienes_somos">Quienes Somos</a></li>
+								<li><a href="#Testimonios">Testimonios</a></li>
+								<li><a href="contact.html">Contacto</a></li>
+								<li><a href="PriceList.html">Precios</a></li>
+								
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<h3>Servicios</h3>
+							<ul class="link">
+								<li><a href="#services">Alimentación</a></li>
+								<li><a href="#services">Alojamiento</a></li>
+								<li><a href="#services">Buceo</a></li>
+								<li><a href="#services">Alquiler de Tablas de Surf</a></li>
+								<li><a href="#services">Avistamiento de Ballenas</a></li>
+								<li><a href="#services">Caminatas con Guia Experto</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<ul class="social-icons">
+						<li>
+							<a href="https://twitter.com/ChoibaEcolodge" target="_blank"><i class="icon-twitter-with-circle"></i></a>
+							<a href="https://www.facebook.com/CHOIBACOLOMBIA/?ref=br_tf" target="_blank"><i class="icon-facebook-with-circle"></i></a>
+							<a href="https://www.instagram.com/choibaecolodge/?hl=en" target="_blank"><i class="icon-instagram-with-circle"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+	
+	<!-- Javascripts -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<!-- Dropdown Menu -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Owl Slider -->
+	<!-- // <script src="js/owl.carousel.min.js"></script> -->
+	<!-- Date Picker -->
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	<!-- CS Select -->
+	<script src="js/classie.js"></script>
+	<script src="js/selectFx.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+
+	<script src="js/custom.js"></script>
+
+</body>
+</html>
